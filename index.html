@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufyan Iqbal - Ruby on Rails Developer</title>
+    <meta name="description" content="Senior Ruby on Rails Developer with 4+ years of experience building scalable web applications and e-commerce solutions.">
+    <meta name="keywords" content="Ruby on Rails, Developer, Full Stack, Web Development, PostgreSQL, JavaScript">
+    <meta name="author" content="Sufyan Iqbal">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sufyan Iqbal - Ruby on Rails Developer">
+    <meta property="og:description" content="Senior Ruby on Rails Developer with 4+ years of experience building scalable web applications and e-commerce solutions.">
+    <meta property="og:url" content="https://sufyaniqbal.github.io/resume">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sufyan Iqbal - Ruby on Rails Developer">
+    <meta property="twitter:description" content="Senior Ruby on Rails Developer with 4+ years of experience building scalable web applications and e-commerce solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
     <style>
         * {
             margin: 0;
@@ -15,15 +33,17 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.4;
             color: #333;
-            background: #fff;
+            background: #f8f9fa;
             font-size: 11px;
         }
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
 
         .header {
@@ -57,6 +77,15 @@
 
         .contact-info span {
             color: #34495e;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         .section {
@@ -237,14 +266,80 @@
             margin-top: 15px;
         }
 
+        .action-buttons {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 0 5px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+        }
+
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 0;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .competencies {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .duration {
+                margin-top: 2px;
+            }
+        }
+
         @media print {
+            body {
+                background: white;
+            }
+
             .container {
                 padding: 0;
                 max-width: none;
+                box-shadow: none;
+                margin: 0;
             }
             
-            body {
-                font-size: 10px;
+            .action-buttons {
+                display: none;
             }
             
             .section {
@@ -253,6 +348,40 @@
             
             .experience-item {
                 break-inside: avoid;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            .container {
+                background: #2d2d2d;
+                color: #e0e0e0;
+            }
+
+            .header {
+                border-bottom-color: #4a4a4a;
+            }
+
+            .header h1,
+            .section h2,
+            .job-title,
+            .degree,
+            .project-name,
+            .competency-title {
+                color: #64b5f6;
+            }
+
+            .section h2 {
+                border-bottom-color: #4a4a4a;
+            }
+
+            .contact-info a {
+                color: #81c784;
             }
         }
     </style>
@@ -265,8 +394,11 @@
             <div class="contact-info">
                 <span>📍 House#A-32 Gul Bahar Colony, Canal Bank Road, Lahore</span>
                 <span>📞 +92 303 4377877</span>
-                <span>📧 sufyaniqbal.dev@gmail.com</span>
-                <span>💼 LinkedIn | Upwork | Fiverr | GitHub</span>
+                <span>📧 <a href="mailto:sufyaniqbal.dev@gmail.com">sufyaniqbal.dev@gmail.com</a></span>
+                <span>💼 <a href="https://linkedin.com/in/sufyaniqbal" target="_blank">LinkedIn</a> | 
+                      <a href="https://upwork.com/freelancers/sufyaniqbal" target="_blank">Upwork</a> | 
+                      <a href="https://fiverr.com/sufyaniqbal" target="_blank">Fiverr</a> | 
+                      <a href="https://github.com/sufyaniqbal" target="_blank">GitHub</a></span>
             </div>
         </div>
 
@@ -524,6 +656,12 @@
         <div class="references">
             <em>References available upon request</em>
         </div>
+
+        <div class="action-buttons">
+            <a href="javascript:window.print()" class="btn">🖨️ Print Resume</a>
+            <a href="mailto:sufyaniqbal.dev@gmail.com" class="btn">📧 Contact Me</a>
+            <a href="https://github.com/sufyaniqbal" class="btn btn-secondary" target="_blank">📁 View GitHub</a>
+        </div>
     </div>
 
     <script>
@@ -533,6 +671,19 @@
                 window.print();
             }
         });
+
+        // Add smooth scrolling for any internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add simple analytics tracking (you can replace with Google Analytics)
+        console.log('Resume viewed at:', new Date().toISOString());
     </script>
 </body>
 </html>
