@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sufyan Iqbal - Ruby on Rails Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+            font-size: 11px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .header .title {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 10px;
+        }
+
+        .contact-info span {
+            color: #34495e;
+        }
+
+        .section {
+            margin-bottom: 18px;
+        }
+
+        .section h2 {
+            font-size: 14px;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .summary {
+            text-align: justify;
+            color: #2c3e50;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category {
+            margin-bottom: 8px;
+        }
+
+        .skill-category strong {
+            color: #2c3e50;
+            font-size: 10px;
+        }
+
+        .skill-category span {
+            display: block;
+            margin-top: 2px;
+            font-size: 10px;
+            color: #555;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+            break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 12px;
+        }
+
+        .company {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 11px;
+        }
+
+        .duration {
+            color: #7f8c8d;
+            font-size: 10px;
+            white-space: nowrap;
+        }
+
+        .job-description {
+            margin-top: 5px;
+        }
+
+        .job-description ul {
+            margin-left: 15px;
+            margin-top: 3px;
+        }
+
+        .job-description li {
+            margin-bottom: 2px;
+            font-size: 10px;
+            color: #555;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .project-category h3 {
+            font-size: 11px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .project-item {
+            margin-bottom: 3px;
+            font-size: 10px;
+        }
+
+        .project-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .project-desc {
+            color: #666;
+            margin-left: 5px;
+        }
+
+        .education-item {
+            margin-bottom: 8px;
+        }
+
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 11px;
+        }
+
+        .institution {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 10px;
+        }
+
+        .education-details {
+            font-size: 10px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .competencies {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .competency-item {
+            margin-bottom: 5px;
+        }
+
+        .competency-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 10px;
+        }
+
+        .competency-desc {
+            color: #666;
+            font-size: 10px;
+            margin-top: 1px;
+        }
+
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 10px;
+        }
+
+        .interests-list span {
+            color: #555;
+        }
+
+        .references {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 10px;
+            margin-top: 15px;
+        }
+
+        @media print {
+            .container {
+                padding: 0;
+                max-width: none;
+            }
+            
+            body {
+                font-size: 10px;
+            }
+            
+            .section {
+                break-inside: avoid;
+            }
+            
+            .experience-item {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SUFYAN IQBAL</h1>
+            <div class="title">Senior Ruby on Rails Developer</div>
+            <div class="contact-info">
+                <span>📍 House#A-32 Gul Bahar Colony, Canal Bank Road, Lahore</span>
+                <span>📞 +92 303 4377877</span>
+                <span>📧 sufyaniqbal.dev@gmail.com</span>
+                <span>💼 LinkedIn | Upwork | Fiverr | GitHub</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <div class="summary">
+                Top Rated Plus Ruby on Rails Developer with 4+ years of experience building scalable web applications and e-commerce solutions. Recently promoted to Senior Software Engineer in recognition of exceptional performance and technical leadership. Proven track record of successfully upgrading legacy systems (Rails 4 to Rails 7), implementing modern UI/UX designs, and delivering projects on time across different time zones. Strong background in full-stack development with expertise in modern web technologies and database management.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>TECHNICAL SKILLS</h2>
+            <div class="skills-grid">
+                <div>
+                    <div class="skill-category">
+                        <strong>Programming Languages:</strong>
+                        <span>Ruby, JavaScript, C++, C#, SQL, HTML, CSS</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Frameworks & Libraries:</strong>
+                        <span>Ruby on Rails, ASP.NET, jQuery, Bootstrap, TailwindCSS, SASS, Stimulus.js</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category">
+                        <strong>Databases:</strong>
+                        <span>PostgreSQL, MySQL, SQL Server Express, Graph databases</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Tools & Technologies:</strong>
+                        <span>Git, Heroku, Digital Ocean, AWS, Linux, VS Code, RubyMine, PgAdmin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Freelance Ruby on Rails Developer</div>
+                        <div class="company">Upwork Platform</div>
+                    </div>
+                    <div class="duration">June 2022 - Present</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Delivered 15+ successful Ruby on Rails projects for international clients across various industries</li>
+                        <li>Successfully upgraded touringplans.com, a high-traffic tourism platform, improving performance by 40%</li>
+                        <li>Maintained 100% client satisfaction rate with excellent reviews and repeat business</li>
+                        <li>Managed end-to-end project delivery including requirements gathering, development, testing, and deployment</li>
+                        <li>Collaborated with remote teams across different time zones, demonstrating strong communication skills</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Engineer</div>
+                        <div class="company">Activekey Solutions</div>
+                    </div>
+                    <div class="duration">January 2022 - Present</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Leading development of HUB CMS Copilot, a comprehensive content management system</li>
+                        <li>Collaborated with cross-functional teams of 5+ developers to deliver scalable software solutions</li>
+                        <li>Implemented best practices for code quality, testing, and maintainability</li>
+                        <li>Reduced system response time by 30% through database optimization and code refactoring</li>
+                        <li>Mentored junior developers and conducted code reviews</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Ruby on Rails Developer</div>
+                        <div class="company">BrainArcs</div>
+                    </div>
+                    <div class="duration">April 2021 - December 2021</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Worked as a key team member on multiple client projects</li>
+                        <li>Contributed to full-stack development using Ruby on Rails</li>
+                        <li>Participated in code reviews and maintained high coding standards</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Ruby on Rails Intern</div>
+                        <div class="company">JAZZARI</div>
+                    </div>
+                    <div class="duration">December 2020 - March 2021</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Developed a comprehensive e-commerce platform with integrated payment gateway using Stripe</li>
+                        <li>Gained hands-on experience with payment processing and secure transaction handling</li>
+                        <li>Built responsive user interfaces and optimized database queries</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Angular Developer</div>
+                        <div class="company">PUJC Software House</div>
+                    </div>
+                    <div class="duration">March 2018 - August 2020</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Developed and tested web applications under Project Manager supervision</li>
+                        <li>Created a student portal for Punjab University students using Angular</li>
+                        <li>Ensured application functionality through comprehensive testing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Teaching Assistant - Object Oriented Programming</div>
+                        <div class="company">University of the Punjab</div>
+                    </div>
+                    <div class="duration">March 2018 - July 2018</div>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Assisted course instructor in teaching C++ programming concepts</li>
+                        <li>Mentored student groups in OOP projects and assignments</li>
+                        <li>Developed communication and leadership skills through teaching experience</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>KEY PROJECTS</h2>
+            <div class="projects-grid">
+                <div class="project-category">
+                    <h3>E-commerce & Business Applications:</h3>
+                    <div class="project-item">
+                        <span class="project-name">touringplans.com</span>
+                        <span class="project-desc">- Successfully upgraded and optimized existing tourism platform, improving performance by 40%</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-name">Grapepedia</span>
+                        <span class="project-desc">- Wine information and review platform with user rating system</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-name">Fainch Therapy</span>
+                        <span class="project-desc">- Healthcare management system with appointment scheduling</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-name">italyabroad.com</span>
+                        <span class="project-desc">- International education consulting platform with CRM integration</span>
+                    </div>
+                </div>
+                <div class="project-category">
+                    <h3>Other Notable Projects:</h3>
+                    <div class="project-item">
+                        <span class="project-name">QuickAuction</span>
+                        <span class="project-desc">- Real-time online auction platform with bidding system</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-name">DistroPayment</span>
+                        <span class="project-desc">- Secure payment processing system with multiple gateway integration</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-name">MoneyCapital</span>
+                        <span class="project-desc">- Financial management platform with analytics dashboard</span>
+                    </div>
+                    <div class="project-item">
+                        <span class="project-name">Student Portal</span>
+                        <span class="project-desc">- University management system (Angular)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EDUCATION</h2>
+            <div class="education-item">
+                <div class="degree">Bachelor of Science in Computer Science</div>
+                <div class="institution">University of the Punjab, Pakistan</div>
+                <div class="education-details">2016 - 2020 | CGPA: 3.11/4.00</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Diploma of Associate Engineering (DAE)</div>
+                <div class="institution">TEVTA, Pakistan</div>
+                <div class="education-details">First Division</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">Matriculation</div>
+                <div class="institution">BISE Lahore, Pakistan</div>
+                <div class="education-details">Second Division</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>CORE COMPETENCIES</h2>
+            <div class="competencies">
+                <div>
+                    <div class="competency-item">
+                        <div class="competency-title">Technical Leadership</div>
+                        <div class="competency-desc">Leading development teams and mentoring junior developers</div>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-title">Problem Solving</div>
+                        <div class="competency-desc">Analytical approach to complex technical challenges</div>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-title">Communication</div>
+                        <div class="competency-desc">Strong English proficiency and presentation skills</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="competency-item">
+                        <div class="competency-title">Collaboration</div>
+                        <div class="competency-desc">Effective team player with experience in agile environments</div>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-title">Continuous Learning</div>
+                        <div class="competency-desc">Passionate about staying updated with latest technologies</div>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-title">Project Management</div>
+                        <div class="competency-desc">End-to-end project delivery and client relationship management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>INTERESTS & ACTIVITIES</h2>
+            <div class="interests-list">
+                <span>• Reading technical journals and research papers</span>
+                <span>• Contributing to open-source projects</span>
+                <span>• Badminton and outdoor activities</span>
+                <span>• Technology experimentation and exploration</span>
+                <span>• Community involvement and helping fellow developers</span>
+            </div>
+        </div>
+
+        <div class="references">
+            <em>References available upon request</em>
+        </div>
+    </div>
+
+    <script>
+        // Add print functionality
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'p') {
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
